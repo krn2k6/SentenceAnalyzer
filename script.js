@@ -1,8 +1,6 @@
-
 const input = document.querySelector("#sentenceInput")
 const sbtbtn = document.querySelector("#analyzebtn")
 const results = document.querySelector("#results")
-
 
 let data;
 
