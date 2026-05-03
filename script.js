@@ -6,8 +6,8 @@ const results = document.querySelector("#results")
 
 let data;
 
-sbtbtn.addEventListener("click",()=>{
-    data = input.value
+function analyze(){
+  data = input.value
     const vowel = getVowelCount(data);
     const consonant = getConsonantCount(data)
     const punctuations = getPunctuationCount(data)
@@ -22,9 +22,20 @@ sbtbtn.addEventListener("click",()=>{
     Punctuations: ${punctuations} <br/>
     Words: ${word} <br/>
     Characters: ${character} <br/>`
+  }
+
+sbtbtn.addEventListener("click",(e)=>{
+  // console.log(e)
+  analyze();
+    
 })
 
-
+input.addEventListener("keydown",(e)=>{
+  if(e.key === "Enter" && e.ctrlKey){
+  // console.log(e)
+  analyze();
+  
+}})
 
 
 
